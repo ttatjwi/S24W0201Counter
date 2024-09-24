@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LinearLayout: 겹겹히 층으로 배치하는 것 -->
+<!-- match_parent는 부모 영역 모두 채움-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+<!--    vertical TextView는 먼저 쓴 게 위에서 나옴    -->
+<!--    '_'는 snake case      -->
+<!--    font size에는 sp 단위   -->
+<!--    'layout_' 나와 부모 간의 관계 정의      -->
+<!--    android:layout_gravity="center"
+        내가 가지고 있는 전체, 틀을 부모 영역 중심에 위치 = 글자가 중앙에 안 올 수도 있음     -->
+<!--    패딩까지가 자기 요소, 마진은 부모 요소    -->
+<!--    android:layout_weight="1" 해당 요소가 모든 영역을 차지한다, 다른 요소의 영역을 제외하고-->
+    <TextView
+        android:id="@+id/txt_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+
+        android:textSize="70sp"
+        android:layout_gravity="center"
+
+        android:text="0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="증가" />
+        <Button
+            android:id="@+id/btn_sub"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="감소" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_reset"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="초기화" />
+
+</LinearLayout>
